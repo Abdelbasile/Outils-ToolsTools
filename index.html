@@ -9,14 +9,16 @@
 <body>
   <header>
     <h1>Les outils scolaires</h1>
-    <nav>
-      <ul>
+    <nav class="navbar">
+      <div class="logo">Outils Tools</div>
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+       <ul class="nav-links" id="navLinks">
         <li><a href="#formulaire">Formulaire</a></li>
         <li><a href="#convertisseur">Convertisseur</a></li>
         <li><a href="#calculatrice">Calculatrice</a></li>
-        <li><a href="#moyenne">Moyenne des Notes</a></li>
+        <li><a href="#moyenne">Moyenne</a></li>
         <li><a href="#theme">Thème</a></li>
-      </ul>
+       </ul>
     </nav>
   </header>
 
@@ -37,28 +39,37 @@
 
     <section id="convertisseur">
       <h2>Convertisseur de Monnaie</h2>
-      <input type="number" id="amount" placeholder="Montant" required>
-      <select id="currency">
-        <option value="0.92">USD -> EUR</option>
-        <option value="1.09">EUR -> USD</option>
-      </select>
-      <button onclick="convert()">Convertir</button>
-      <p id="conversionResult"></p>
+       <div class="converter-box">
+        <input type="number" id="amount" placeholder="Entrez le montant" required>
+        <select id="currency">
+         <option value="0.92">USD → EUR</option>
+         <option value="1.09">EUR → USD</option>
+         <option value="655">EUR → XAF</option>
+         <option value="0.0015">XAF → EUR</option>
+        </select>
+         <button onclick="convert()">Convertir</button>
+         <p id="conversionResult"></p>
+       </div>
     </section>
 
     <section id="calculatrice">
       <h2>Calculatrice Scientifique</h2>
-      <input type="text" id="calcInput" placeholder="Ex : 5+5" required>
-      <button onclick="calculate()">Calculer</button>
-      <p id="calcResult"></p>
+       <div class="calc-box">
+        <input type="text" id="calcInput" placeholder="Ex : 2*(3+4)" required>
+        <button onclick="calculate()">Calculer</button>
+        <p id="calcResult"></p>
+       </div>
     </section>
 
     <section id="moyenne">
       <h2>Calcul de Moyenne des Notes</h2>
-      <input type="number" id="noteInput" placeholder="Entrez une note">
-      <button onclick="addNote()">Ajouter une note</button>
-      <button onclick="calculateAverage()">Calculer la Moyenne</button>
-      <p id="averageResult"></p>
+        <div class="average-box">
+         <input type="number" id="noteInput" placeholder="Entrez une note entre 0 et 20">
+         <button onclick="addNote()">Ajouter une note</button>
+         <ul id="noteList"></ul>
+         <button onclick="calculateAverage()">Calculer la Moyenne</button>
+         <p id="averageResult"></p>
+        </div>
     </section>
 
     <section id="theme">
@@ -68,9 +79,17 @@
   </main>
 
   <footer>
-    <p>&copy; 2025 Basile</p>
+    <div class="footer-content">
+     <p>&copy; 2025 Basile — Tous droits réservés.</p>
+    </div>
   </footer>
 
   <script src="script.js"></script>
+ <script language="javascript">
+  function toggleMenu() {
+  const nav = document.getElementById("navLinks");
+  nav.classList.toggle("show");
+}
+ </script>
 </body>
 </html>
