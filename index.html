@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The tools</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Les outils scolaires</h1>
+    <nav>
+      <ul>
+        <li><a href="#formulaire">Formulaire</a></li>
+        <li><a href="#convertisseur">Convertisseur</a></li>
+        <li><a href="#calculatrice">Calculatrice</a></li>
+        <li><a href="#moyenne">Moyenne des Notes</a></li>
+        <li><a href="#theme">Thème</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="formulaire">
+      <h2>Formulaire</h2>
+      <form id="userForm">
+        <label for="name">Nom :</label>
+        <input type="text" id="name" required placeholder="Entrez votre nom">
+        
+        <label for="email">Email :</label>
+        <input type="email" id="email" required placeholder="Entrez votre email">
+        
+        <button type="submit">Soumettre</button>
+      </form>
+      <p id="formMessage"></p>
+    </section>
+
+    <section id="convertisseur">
+      <h2>Convertisseur de Monnaie</h2>
+      <input type="number" id="amount" placeholder="Montant" required>
+      <select id="currency">
+        <option value="0.92">USD -> EUR</option>
+        <option value="1.09">EUR -> USD</option>
+      </select>
+      <button onclick="convert()">Convertir</button>
+      <p id="conversionResult"></p>
+    </section>
+
+    <section id="calculatrice">
+      <h2>Calculatrice Scientifique</h2>
+      <input type="text" id="calcInput" placeholder="Ex : 5+5" required>
+      <button onclick="calculate()">Calculer</button>
+      <p id="calcResult"></p>
+    </section>
+
+    <section id="moyenne">
+      <h2>Calcul de Moyenne des Notes</h2>
+      <input type="number" id="noteInput" placeholder="Entrez une note">
+      <button onclick="addNote()">Ajouter une note</button>
+      <button onclick="calculateAverage()">Calculer la Moyenne</button>
+      <p id="averageResult"></p>
+    </section>
+
+    <section id="theme">
+      <h2>Choisir le Thème</h2>
+      <button onclick="toggleTheme()">Basculer entre mode clair/sombre</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Basile</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
