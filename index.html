@@ -26,19 +26,22 @@
 
   <main>
     <section id="formulaire">
-     <h2>Formulaire</h2>
-     <form action="https://formspree.io/f/xnndgbwj" method="POST" id="userForm">
-        <label for="name">Nom :</label>
-         <input type="text" name="name" id="name" required placeholder="Entrez votre nom">
+       <h2>Formulaire</h2>
+         <form action="https://formspree.io/f/xnndgbwj" method="POST" id="userForm">
+          <label for="name">Nom :</label>
+          <input type="text" id="name" name="name" required placeholder="Entrez votre nom">
 
-         <label for="email">Email :</label>
-         <input type="email" name="email" id="email" required placeholder="Entrez votre email">
+          <label for="email">Email :</label>
+          <input type="email" id="email" name="email" required placeholder="Entrez votre email">
 
-         <label for="message">Message :</label>
-         <textarea name="message" id="message" required placeholder="Tapez votre message ici..."></textarea>
+          <label for="message">Message :</label>
+          <textarea id="message" name="message" required placeholder="Tapez votre message ici..."></textarea>
 
-         <button type="submit">Soumettre</button>
-     </form>
+          <button type="submit">Soumettre</button>
+         </form>
+
+           <!-- Message de confirmation après envoi -->
+          <p id="formMessage" style="display:none; color: green;">Votre message a bien été envoyé !</p>
     </section>
 
     <section id="convertisseur">
