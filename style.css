@@ -164,7 +164,13 @@ p {
 
 #formMessage {
   margin-top: 10px;
-  color: green;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #e6f9f0;
+  color: #2e7d32;
+  border: 1px solid #a5d6a7;
 }
 
 #conversionResult, #calcResult, #averageResult {
